@@ -71,6 +71,17 @@ SetCapsLockState, Off
 Else SetCapsLockState, On
 return
 
+::jia::
+Send, jia
+return
+j & i::Send, ji
+::jie:: 
+Send jie
+return
+j & u::Send, ju
+j & k::Send, jk
+return
+
 j & e::
 Send {Up}
 return
@@ -107,11 +118,14 @@ j & v::
 Send {LButton}
 return
 
-j & i::Send, ji
-j & u::Send, ju
-j & k::Send, jk
-return
-
 j::
 Send, j
+return
+
++j::
+Send, J
+return
+
+^j::
+Send, ^j
 return
