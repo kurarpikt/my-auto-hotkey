@@ -1,3 +1,9 @@
+$CapsLock::Delete
+$Delete::CapsLock
+
+Esc::`
+`::Esc
+
 <!w::
 Send ^w
 return
@@ -62,24 +68,24 @@ return
 Send +^{Right}
 return
 
-$CapsLock::Delete
-$Delete::CapsLock
-
-<!c::
+>+c::
 If GetKeyState("CapsLock", "T")
 SetCapsLockState, Off
 Else SetCapsLockState, On
 return
 
-::jia::
-Send, jia
-return
 j & i::Send, ji
-::jie:: 
-Send jie
+::jie::Send jie
+::jia::Send jia
+::jiao::Send jiao
+::jian::Send jian
+::jiang::Send jiang
+::jin::Send jin
+::jing::Send jing
 return
 j & u::Send, ju
 j & k::Send, jk
+j & o::Send, jo
 return
 
 j & e::
@@ -114,8 +120,20 @@ j & g::
 Send {End}
 return
 
+j & `::
+Send ^!{Insert}
+return
+
+j & CapsLock::
+Send ^g
+return
+
+j & c::
+Send ^!{PgUp}
+return
+
 j & v::
-Send {LButton}
+Send ^!{PgDn}
 return
 
 j::
@@ -126,6 +144,14 @@ return
 Send, J
 return
 
-^j::
+j & Space::
 Send, ^j
+return
+
+<!1::
+Send {PgUp}
+return
+
+<!2::
+Send {PgDn}
 return
